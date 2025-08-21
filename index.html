@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjYuMjI1IiBoZWlnaHQ9Ijg1LjczOSIgdmlld0JveD0iMCAwIDIyNi4yMjUgODUuNzM5Ij4KICA8ZyBpZD0iZWxhbmRfbG9nb19zdmctMDEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02NC40NTggLTcwLjA2KSI+CiAgICA8cGF0aCBpZD0iUGF0aF8xIiBkYXRhLW5hbWU9IlBhdGggMSIgZD0iTTMxOS43MzEsMjI5LjgxOFYyNDUuMjZsLTM3LTkuMjExVjE5MC4xMzJsMzYuOC0xNS43MTIuMiwxNi45MzEtMjQuNTkzLDYuOTA3LjE0Nyw3Ljg1NiwyNC4yNDktMi41NzQuMiwxNC40OTQtMjUuMTg0LS41NDMuMyw4LjEyOFoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMTguMjcyIC04OS40NjEpIiBmaWxsPSIjNTg1M2EzIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8yIiBkYXRhLW5hbWU9IlBhdGggMiIgZD0iTTU0MC41MiwxNzQuNDJsMTIuNjc5LDUuNTUydjE0LjQ5NGwtMTIuNDgyLTMuMTE1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQzOS4yNTggLTg5LjQ2MSkiIGZpbGw9IiMyZTJiNzciLz4KICAgIDxwYXRoIGlkPSJQYXRoXzMiIGRhdGEtbmFtZT0iUGF0aCAzIiBkPSJNNTQwLjUyLDM3OC4zOWwxMi42NzkuNjc4djEzLjE4M2wtMTIuNDgyLjYzMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MzkuMjU4IC0yNjQuMzExKSIgZmlsbD0iIzFhMTQ0YSIvPgogICAgPHBhdGggaWQ9IlBhdGhfNCIgZGF0YS1uYW1lPSJQYXRoIDQiIGQ9Ik01NDEuOSw1MzYuNDI0bDI0Ljg5LTQuMzM0djEzLjUzM2wtMjQuODksNi4yNDNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDQwLjQ0MSAtMzk2LjA2NykiIGZpbGw9IiMxYTE0NGEiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzUiIGRhdGEtbmFtZT0iUGF0aCA1IiBkPSJNMzY5LjY0LDM0MS4zOWwxNC4xOC45djUuNDY0bC0xNC4wMzMsMS40ODlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjkyLjc3NCAtMjMyLjU5MykiIGZpbGw9IiMxYTE0NGEiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzYiIGRhdGEtbmFtZT0iUGF0aCA2IiBkPSJNMzY1LjUsNDc2LjExbDE0Ljc3MS4zMTh2Ni4wN0wzNjUuOCw0ODQuMjM4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI4OS4yMjUgLTM0OC4wNzkpIiBmaWxsPSIjMWExNDRhIi8+CiAgICA8cGF0aCBpZD0iUGF0aF83IiBkYXRhLW5hbWU9IlBhdGggNyIgZD0iTTM2OS42NCwyOTkuOTE3bDI0LjU5My02LjkwNywxMi40ODIsMy4xMTUtMjIuOSw0LjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjkyLjc3NCAtMTkxLjEyKSIgZmlsbD0iIzJlMmI3NyIvPgogICAgPHBhdGggaWQ9IlBhdGhfOCIgZGF0YS1uYW1lPSJQYXRoIDgiIGQ9Ik0zNjcuNTcsNTIyLjZsMTQuNDc1LTEuNzM5LDIyLjksMy42MzUtMTIuNDgyLDIuM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yOTEgLTM4Ni40NDEpIiBmaWxsPSIjMmUyYjc3Ii8+CiAgICA8cGF0aCBpZD0iUGF0aF85IiBkYXRhLW5hbWU9IlBhdGggOSIgZD0iTTU0MC41MiwzMTcuNDNsMTIuNjc5LTIuNnY5Ljc1Mkw1NDAuNTIsMzIzLjlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDM5LjI1OCAtMjA5LjgyNSkiIGZpbGw9IiMzNjc1NmQiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzEwIiBkYXRhLW5hbWU9IlBhdGggMTAiIGQ9Ik01NDAuMDA1LDQ3Ni4xMTJsMTIuNDgyLS42MzJ2MTAuMTE0bC0xMi44LTIuMDMyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQzOC41NDcgLTM0Ny41MzkpIiBmaWxsPSIjMzY3NTZkIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8xMSIgZGF0YS1uYW1lPSJQYXRoIDExIiBkPSJNMjgyLjczLDg3LjU2djEzLjExbDM2LjgtMTUuNzEyVjcwLjA2WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxOC4yNzIpIiBmaWxsPSIjNEVBNzlDIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8xMiIgZGF0YS1uYW1lPSJQYXRoIDEyIiBkPSJNNTY1LjYwNyw4My4wMDYsNTQwLjUyLDcwLjA2djE0LjlMNTUzLjIsOTAuNTExdjQ3LjU0M2wxMi40MDgtMi4wMzIuMTQ3LTQwLjA5M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MzkuMjU4KSIgZmlsbD0iIzRlYTc5YyIvPgogICAgPHBhdGggaWQ9IlBhdGhfMTMiIGRhdGEtbmFtZT0iUGF0aCAxMyIgZD0iTTMyLjY0OSw3NzQuMTF2MS4zaC0xNC4ydjguODhIMzEuMDg1djEuMzM2SDE4LjQ1MnY5LjQyM0gzMy4xdjEuMzEySDE3Vjc3NC4xMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzNS43NjIgLTY2OS44ODUpIiBmaWxsPSIjMWExNDRhIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8xNCIgZGF0YS1uYW1lPSJQYXRoIDE0IiBkPSJNMjA1LjMzOCw3NzQuMTF2MjAuOTQyaDEwLjc5NXYxLjMxM0gyMDMuODhWNzc0LjExWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI0LjQzNyAtNjY5Ljg4NSkiIGZpbGw9IiMxYTE0NGEiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzE1IiBkYXRhLW5hbWU9IlBhdGggMTUiIGQ9Ik0zNzUsNzkwLjA2N0gzNjAuOGwtMy4xMjQsNi4zNDJoLTEuNmwxMS0yMi4yNDloMS41NjJsMTEuMTA3LDIyLjI0OWgtMS42Wm0tLjY1NC0xLjMzNi02LjUtMTMuMDUtNi40MjQsMTMuMDVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTU0LjkwOCAtNjY5LjkyOCkiIGZpbGw9IiMxYTE0NGEiLz4KICAgIDxwYXRoIGlkPSJQYXRoXzE2IiBkYXRhLW5hbWU9IlBhdGggMTYiIGQ9Ik02MDEuNyw3NzQuMTFsMTYuMjEsMjAuMjExVjc3NC4xMWgxLjQyOHYyMi4yNTZoLTEuN2wtMTYuMTc1LTIwLjIxOXYyMC4yMTlINjAwVjc3NC4xMVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNjQuMDA0IC02NjkuODg1KSIgZmlsbD0iIzFhMTQ0YSIvPgogICAgPHBhdGggaWQ9IlBhdGhfMTciIGRhdGEtbmFtZT0iUGF0aCAxNyIgZD0iTTg1MC4yODIsNzg1LjI1YzAsNi4xNzUtNS41NTQsMTEuMTA5LTEyLjUsMTEuMTA5SDgyOC4xN1Y3NzQuMTFoOS42NUM4NDQuNzI4LDc3NC4xMSw4NTAuMjgyLDc3OS4wMTEsODUwLjI4Miw3ODUuMjVabS0xLjQ5NCwwYzAtNS40NzUtNC44OTQtOS44MzUtMTEtOS44MzVoLTguMTU2djE5LjYzOGg4LjE5MWM2LjA3NSwwLDEwLjk2OS00LjM2LDEwLjk2OS05LjhaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTU5LjU5OSAtNjY5Ljg4NSkiIGZpbGw9IiMxYTE0NGEiLz4KICA8L2c+Cjwvc3ZnPgo=" width="70%" alt="logo">
+
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="Search Here">
+                <label for="search"> <i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="./hd-man-user-illustration-icon-transparent-png-701751694974843ybexneueic.png" alt="image">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <div>User</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-file"></i>
+                        <div>Leases</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-folder"></i>
+                        <div>Invoices</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-inbox"></i>
+                        <div>Expense</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-database"></i>
+                        <div>reports</div>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+        <!-- MAIN -->
+
+
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Collection</div>
+                        <div class="number">PKR 100</div>
+                    </div>
+                    <!-- <div class="icon-box">
+                        <i class="fa-solid fa-check"></i>
+                    </div> -->
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Pending</div>
+                        <div class="number">PKR 100</div>
+                    </div>
+                    <!-- <div class="icon-box">
+                        <i class="fa-solid fa-check"></i>
+                    </div> -->
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Expense</div>
+                        <div class="number">PKR 100</div>
+                    </div>
+                    <!-- <div class="icon-box">
+                        <i class="fa-solid fa-check"></i>
+                    </div> -->
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-name">Net-Income</div>
+                        <div class="number">PKR 100</div>
+                    </div>
+                    <!-- <div class="icon-box">
+                        <i class="fa-solid fa-check"></i>
+                    </div> -->
+                </div>
+                
+            </div>
+            <div class="charts"></div>
+            <div class="chart">
+                <img src="https://images.cooltext.com/5738166.gif" alt="image">
+                <canvas id="myChart"></canvas>
+            </div>
+            <div class="chart">
+                <marquee behavior="both" direction="bother"><h2> Leases Details </h2></marquee>
+                <canvas id="donutChart"></canvas>
+            </div>    
+            <div class="main-1">            
+                 <div class="chart">
+      <h2>Pie Chart</h2>
+      <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="chart">
+      <h2>Radar Chart</h2>
+      <canvas id="radarChart"></canvas>
+    </div>
+
+    <div class="chart">
+      <h2>Polar Chart</h2>
+      <canvas id="polarChart"></canvas>
+    </div>
+
+    <div class="chart">
+      <h2>Bubble Chart</h2>
+      <canvas id="bubbleChart"></canvas>
+    </div>
+        </div>  
+    </div>
+    </div>
+    <script src="./1.js"></script>
+</body>
+</html>
