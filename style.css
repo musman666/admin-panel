@@ -68,6 +68,8 @@
     object-fit: cover;
 }
 
+
+
 /* Side Bar */
 
 .sidebar{
@@ -229,3 +231,4 @@ max-width: 400px;
   transform: translateY(15px);
 
 }
+
