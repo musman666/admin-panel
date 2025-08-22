@@ -1,3 +1,74 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar{
+  background: #eee;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.08);
+  width: 100%;
+
+}
+.li-1{
+  list-style: none;
+  display: flex;
+  gap: 10%;
+  padding-left: 25%;
+}
+.li-1 a{
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+.logo{
+  padding-left: 10%;
+}
+
+.button-1{
+  margin-left: 6px;
+  display: flex;
+  padding-right: 2%;
+}
+.button-1 :hover{
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.87);
+}
+.r-1{
+  border-radius: 4px;
+  color: #fff;
+  width: 55%;
+  height: 20%;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  background-color: #2E2B77;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.l-1{
+  border-radius: 4px;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 5px 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 55%;
+  height: 10%;
+  background-color: #4EA79C;
+}
+.login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  color: #2E2B77;
+  width: 100;
+  font-size: 1.75rem;
+}
+
 /* Default Light Mode */
 body {
   background-color: #ffffff;
@@ -25,4 +96,11 @@ body.dark {
 body.dark button {
   background: #333;
   color: #fff;
+}
+body.dark login {
+  color: #eee;
+}
+
+.button a{
+  text-decoration: none;
 }
